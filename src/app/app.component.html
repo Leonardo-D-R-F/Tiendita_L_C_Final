@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-red1">
+  <div class="container">
+    <img src="assets/images/icono2.png" width="30" height="30" class="d-inline-block align-top margin-5px" alt="" loading="lazy">
+    <a class="navbar-brand margin-20px" href="#">TU HOGAR</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+     data-target="#navbarColor01" aria-controls="navbarColor01"
+     aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarColor01">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['inicio']">inicio</a></li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['login']">Iniciar Sesion</a></li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['carrito']">Carrito</a></li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/productos']">Productos</a></li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/sugerencias']">sugerencias</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

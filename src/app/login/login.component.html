@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Iniciar Sesion</title>
+  </head>
+  <body>
+    <div class="modal-dialog text-center">
+      <div class="col-sm-8 main-section" >
+        <div class="modal-content">
+          <div class="col-12 user-img">
+            <img src="../assets/images/avatar.png">
+          </div>
+          <form class="col-12" >
+            <div class="form-group" id ="user-group">
+              <input type="text" class="form-control" placeholder="Nombre de Usuario">
+            </div>
+            <div class="form-group" id ="contrasena-group">
+              <input type="password" class="form-control" placeholder="Contraseña"/>
+            </div>
+            <button clase="btn btn-success" type="submit" ><i class="fas fa-sign-in-alt"></i> Ingresar </button>
+          </form>
+          <div class="col-12 forgot">
+            <a href="#"> Recordar Contraseña </a>
+          </div>
+          <h6 style="color:white;">¿Aún no tienes cuenta?</h6>
+           <a href="#" class="" data-toggle="modal" data-target="#exampleModal"  role="button"
+           aria-expanded="false" aria-controls="collapseExample" style="font-weight: bold">Registrate</a>
+
+           <!--VER REGISTROS modificar-->
+           <a href="#" class="" data-toggle="modal" data-target="#regisModal"  role="button"
+           aria-expanded="false" aria-controls="collapseExample" style="font-weight: bold">Ver Registros</a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MODAL PARA REGISTRAR-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">REGISTRO</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-register></app-register>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- PARA  VER LOS REGISTRADOS -->
+    <div class="modal fade" id="regisModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">REGISTRO</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-register ><a href="nuevoID"></a></app-register>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

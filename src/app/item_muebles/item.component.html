@@ -1,0 +1,55 @@
+
+
+<div class="container text-center">
+  <div class="row align-content-around">
+    
+    <div *ngFor="let miembro of _is.items"
+     
+    class=" col-12 col-lg-3"  >
+      <div class="uk-text-center">
+        <h3>{{nombre}}</h3>
+        <div class="card text-centeruk-transition-scale-up uk-transition-opaque uk-transition-toggle card_pintura"
+          style="width: 15rem;">
+          <h5 class="card-title text-danger text"><strong>{{miembro.Nombre}}</strong> </h5>
+
+          <div class=" uk-transition-toggle" tabindex="0">
+            <img class="uk-transition-scale-up uk-transition-opaque" [src] ="miembro.Imagen"  height="150" alt="">
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">{{miembro.Descripcion}}</p>
+
+            <p class="card-text"> precio {{miembro.precio}} bs</p>
+            <button href="#" class="btn btn-danger  " data-toggle="modal" data-target="#exampleModal" ><strong> Ver Productos </strong></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--
+<div *ngFor="let miembro of _is.items" 
+class="card" style="width: 18rem;">
+  <img [src] ="miembro.Imagen" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{miembro.Nombre}}</h5>
+    <p class="card-text">{{miembro.Descripsion}}</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>-->
+
+
+<
+
+
+
+
+
