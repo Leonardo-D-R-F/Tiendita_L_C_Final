@@ -1,44 +1,64 @@
-<form class="" style="color:black" action='' method="POST" id="for">
+
+<form class="" (submit)="addUsuario(newName,newEmail,newPass)"
+        style="color:black" action='' method="POST">
   <fieldset>
+
     <div id="legend">
       <legend style="color:white" class="">Register</legend>
-
     </div>
-    <div class="control-group">
 
+    <div class="control-group">
       <label style="color:white" class="control-label"  for="username" >Username</label>
       <div class="controls">
-        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" [(ngModel)]="nombre" >
+        <input type="text" id="username" name="username" class="input-xlarge" #newName >
         <p style="color:white" class="help-block">Username can contain any letters or numbers, without spaces</p>
       </div>
     </div>
 
     <div class="control-group">
-
       <label style="color:white" class="control-label" for="email">E-mail</label>
       <div class="controls">
-        <input type="text" id="email" name="email" placeholder="" class="input-xlarge" [(ngModel)]="email">
+        <input type="text" id="email" name="email"  class="input-xlarge" #newEmail>
         <p style="color:white" class="help-block">Please provide your E-mail</p>
       </div>
     </div>
 
     <div class="control-group">
-
       <label style="color:white" class="control-label" for="password">Password</label>
       <div class="controls">
-        <input  type="password" id="password"  name="password" placeholder="" class="input-xlarge" [(ngModel)]="contrasenia" >
+        <input  type="password" id="password"  name="password" placeholder=""
+         class="input-xlarge" #newPass>
         <p style="color:white" class="help-block">Password should be at least 4 characters</p>
       </div>
     </div>
-      <div>
-      <div>
-      </div>
-    </div>
+
   </fieldset>
 
-  <button id="registrar_de_one" class="btn btn-primary" (click)="hola()">Registrar</button>
-  <h1>Probando</h1>
+<button type="submit" class="btn btn-success btn-block">Registrar</button>
+
+  <!--h1>Probando</h1>
   <h2>{{nombre}}</h2>
   <h2>{{email}}</h2>
-  <h2>{{contrasenia}}</h2>
+  <h2>{{contrasenia}}</h2-->
 </form>
+
+
+<!--LOS USUARIOS>
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-5" text-center>
+
+      <div class="card-body">
+        <form (submit)="addta">
+            <div class="form-group">
+              <input type="text" placeholder="task title">
+            </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="col-md-7">
+      <h1>Mundo</h1>
+    </div>
+  </div>
+</div-->

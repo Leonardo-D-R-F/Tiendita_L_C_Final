@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 
 import { environment } from '../environments/environment';
 
+import { UsuarioService } from './service/usuario.service';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpModule } from '@angular/http'
@@ -23,6 +25,7 @@ import {FormsModule} from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ProductosComponent } from './productos/productos.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { ProductosComponent } from './productos/productos.component';
     InicioComponent,
     CarritoComponent,
     ProductosComponent,
+    UsuarioComponent,
 
   ],
   imports: [
@@ -48,7 +52,8 @@ import { ProductosComponent } from './productos/productos.component';
   ],
   providers: [
     appRoutingProviders,
-    AuthService
+    AuthService,
+    UsuarioService
   ],
   bootstrap: [AppComponent],
 

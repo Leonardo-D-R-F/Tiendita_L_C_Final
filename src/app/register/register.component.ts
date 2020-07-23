@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-
+import { UsuarioService } from '../service/usuario.service';
 
 @Component({
   selector: 'app-register',
@@ -8,24 +8,25 @@ import { Component, OnInit} from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   contador_de_clicks = 0;
-  nombre: string="";
-  email: string= '';
-  contrasenia: string ='';
-  constructor() { }
-      
+  constructor(public user: UsuarioService) {
+  }
   ngOnInit() {
   }
-  hola(){
-    //this.nombre= document.getElementById('username').value;
-    //this.email= document.getElementById('email').value;
-    //this.contrasenia= document.getElementById('password').value;
-    this.contador_de_clicks++ ;
-    console.log("HOLA");
-    console.log(this.nombre);
-    console.log(this.email);
-    console.log(this.contrasenia);
-    console.log(this.contador_de_clicks)
-    
+  addUsuario(newName: HTMLInputElement, newEmail: HTMLInputElement, newPass: HTMLInputElement){
+    console.log("AGREGANDO USUARIO....");
+    this.user.addUsuarios({
+      nombre: newName.value,
+      email: newEmail.value,
+      pass: newPass.value,
+      hide: true
+    });
+    console.log(this.user);
+    newName.value="";
+    newEmail.value="";
+    newPass.value="";
+    newName.focus();
+  }
+  mostrar(){
+    console.log('hola');
   }
 }
-

@@ -15,7 +15,7 @@ export const environment = {
     measurementId: "G-Q97DRPCS56"
   },
 };
-console.log('Hola que tal');
+//console.log('Hola que tal');
 
 /*
  * For easier debugging in development mode, you can import the following file

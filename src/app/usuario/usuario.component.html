@@ -1,0 +1,20 @@
+
+<h1 align="center">Mis clientes</h1>
+<h3>Usuarios Registrados</h3>
+
+<div class="card mb-4">
+  <ul>
+    <li *ngFor="let usuario of usuarios;">
+      <div class="card-header d-flex justify-content-between allig-item-center">
+        <p><strong>{{usuario.nombre}}</strong></p>
+        <div class="">
+          <button class="btn btn-primary" (click)="usuario.hide = !usuario.hide" >mostrar</button>
+          <button class="btn btn-danger" (click)="eliminarUsuario(usuario)">Eliminar</button>
+        </div>
+      </div>
+      <div class="card-body"[hidden]="usuario.hide">
+        <p><strong>Correo Electronico: </strong> {{usuario.email}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
