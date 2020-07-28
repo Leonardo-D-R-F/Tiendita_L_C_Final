@@ -21,7 +21,7 @@ npm install -g firebase-tools
 
 ---------enlazar Firebase con Correo Electronico---------
 Para asociarlo a nuestra cuenta de firebase ,logeamos y te dara opciones para asociar con 
-los proyectos que tengas creado.
+los proyectos que tengas creado..
 
 firebase login
 
