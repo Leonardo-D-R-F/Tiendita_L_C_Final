@@ -1,0 +1,40 @@
+body{
+  background: url('../../assets/images/wallper3.jpg')no-repeat center center fixed;
+  background-size:cover;
+}
+.form-group input{
+  height: 35px;
+
+  font-size: 17px;
+  border: 0;
+  padding-left:15px;
+  boder-radius:5px;
+}
+
+.form-group{
+  height: 70px;
+  width: 25%;
+  font-size: 18px;
+  border: 0;
+  padding-left:45px;
+  boder-radius:5px;
+}
+.divUser{
+
+padding-left: 50px;
+ padding-top: 50px;
+}
+#div-1a {
+  width: 10%;
+  height:  10px;
+    position:absolute;
+    top:120px;
+    left:770px ;
+    right:100px;
+    width:450px;
+}
+
+.form button{
+  height: 10px;
+  width: 10%;
+}

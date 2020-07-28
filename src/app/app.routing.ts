@@ -10,9 +10,10 @@ import { Item_H_Component } from './item_herramientas/item.component';
 import { Item_M_Component } from './item_muebles/item.component';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { CarritoComponent } from './carrito/carrito.component';
 import { ProductosComponent } from './productos/productos.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+
+import { AdministradorComponent } from './administrador/administrador.component';
 const appRoutes: Routes = [
   {path:'productos',component: ProductosComponent },
   {path:'registros',component: RegisterComponent },
@@ -21,8 +22,9 @@ const appRoutes: Routes = [
   {path:'muebles',component: Item_M_Component },
   {path:'login',component: LoginComponent },
   {path:'inicio',component: InicioComponent },
-  {path:'carrito',component: CarritoComponent },
-  {path:'usuario',component: UsuarioComponent }
+  {path:'administrador',component: AdministradorComponent },
+  {path:'usuario',component: UsuarioComponent },
+  {path:'', redirectTo:'/inicio',pathMatch:'full'} 
 ];
 export const appRoutingProviders: any[] = [];
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);

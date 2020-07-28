@@ -11,21 +11,24 @@ import { environment } from '../environments/environment';
 
 import { UsuarioService } from './service/usuario.service';
 
-import { AngularFireModule } from '@angular/fire';
+//import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { HttpModule } from '@angular/http'
 
 import { ReactiveFormsModule } from "@angular/forms";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import{AuthService} from '../app/service/auth.service'
+import { MuebleService } from '../app/service/mueble.service';
 import { from } from 'rxjs';
 import { RegisterComponent } from './register/register.component';
 
 import {FormsModule} from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
-import { CarritoComponent } from './carrito/carrito.component';
+
 import { ProductosComponent } from './productos/productos.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { AdministradorComponent } from './administrador/administrador.component';
+import { AngularFireModule } from 'angularfire2';
 
 @NgModule({
   declarations: [
@@ -36,14 +39,16 @@ import { UsuarioComponent } from './usuario/usuario.component';
     LoginComponent,
     RegisterComponent,
     InicioComponent,
-    CarritoComponent,
+
     ProductosComponent,
     UsuarioComponent,
+    AdministradorComponent,
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    AngularFireModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     FormsModule,
@@ -53,7 +58,9 @@ import { UsuarioComponent } from './usuario/usuario.component';
   providers: [
     appRoutingProviders,
     AuthService,
-    UsuarioService
+    UsuarioService,
+    MuebleService
+
   ],
   bootstrap: [AppComponent],
 

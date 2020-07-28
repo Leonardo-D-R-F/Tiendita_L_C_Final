@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Iniciar Sesion</title>
-  </head>
-  <body>
+
+  <div class="image" style="height: 130vh;width:100vw;" [ngStyle]="{'background': 'url(../../assets/images/wallper4.jpg) no-repeat 0 0','background-size':'cover'}">
+    <h1 align="center">Inicio De Sesion</h1>
     <div class="modal-dialog text-center">
       <div class="col-sm-8 main-section" >
         <div class="modal-content">
           <div class="col-12 user-img">
             <img src="../assets/images/avatar.png">
           </div>
-          <form class="col-12" >
+
+          <form class="col-12" (submit)="validarUsuario(nombreUser,userPass)" >
             <div class="form-group" id ="user-group">
-              <input type="text" class="form-control" placeholder="Nombre de Usuario">
+              <input type="text" class="form-control" placeholder="Nombre de Usuario" #nombreUser>
             </div>
             <div class="form-group" id ="contrasena-group">
-              <input type="password" class="form-control" placeholder="Contraseña"/>
+              <input type="password" class="form-control" placeholder="Contraseña "#userPass>
             </div>
             <button clase="btn btn-success" type="submit" ><i class="fas fa-sign-in-alt"></i> Ingresar </button>
           </form>
+
           <div class="col-12 forgot">
             <a href="#"> Recordar Contraseña </a>
           </div>
@@ -79,9 +77,6 @@
       </div>
     </div>
 
-  </body>
-</html>
+  </div>
 
-<div class="modal-body" id='n'>
-    <h1 style="color:white">hola mundo</h1>
-</div>
+

@@ -1,0 +1,34 @@
+=============Para el funcionaineto correcto de la pagina=======================
+==============================================================================
+Para el funcionamiento correcto de la pagina web tendra que logearse en la base de datos 
+de firebase. Para ello ya le agregue como propietario de la base de datos en firebase, espero le 
+llegara el correo electronico invitandole a ser propietario para que no tenga problemas en mostrar los items 
+de la aplicacion "Tu Hogar".
+
+Subimos el proyecto con todas las dependencias "node_modules" por lo que no tendra que instalar muchas cosas.
+
+Solo tendra que instalar lo siguinete:
+----------------------firebase instalacion-------------------
+Antes de una instalacion de firebase,debemos crear un proyecto en firefase y asociarlo al proyecto,
+como ya lo tenemos asociado, procederemmos a la instalacion de la herramientas
+
+---------Instalar Herramientas Firebase---------
+
+Nos servira para herramientas de comando ,para inicializar(init), para login
+,saber la version de firebase,etc.
+
+npm install -g firebase-tools
+
+---------enlazar Firebase con Correo Electronico---------
+Para asociarlo a nuestra cuenta de firebase ,logeamos y te dara opciones para asociar con 
+los proyectos que tengas creado.
+
+firebase login
+
+--------inicializar el proyecto--------
+Para conectar el proyecto local al proyecto de Firebase, ejecuta 
+el siguiente comando desde la raíz del directorio del proyecto local:
+
+=>firebase init
+----------Para Ejecutar el proyectoTiendita-Angular ----------
+ejecutamos el comando =>"ng serve" --open o "ng serve"
